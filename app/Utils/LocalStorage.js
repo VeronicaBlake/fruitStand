@@ -3,19 +3,17 @@ import Fruit from "../Models/Fruit.js";
 import Topping from "../Models/Topping.js";
 
 export function saveState() {
-  localStorage.setItem('MarksFruit', JSON.stringify({
+  localStorage.setItem('CurrentCart', JSON.stringify({
     fruits: ProxyState.fruits,
-    toppings: ProxyState.toppings
   }))
   console.log('saved state', ProxyState)
 }
 
 export function loadState() {
-  let data = JSON.parse(localStorage.getItem('MarksFruit'))
+  let data = JSON.parse(localStorage.getItem('CurrentCart'))
   console.log(data)
   if (data != null) {
     ProxyState.fruits = data.fruits.map(p => new Fruit(p))
-    ProxyState.toppings = data.toppings.map(t => new Topping(t))
   }
 
 }

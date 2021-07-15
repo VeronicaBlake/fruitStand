@@ -14,22 +14,28 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <nav class="navbar navbar-dark d-flex justify-content-between navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">fruitStand</span>
-            </a>
+                <span class="ml-2">Fruit Stand</span></a>
+                <button>Increase $</button>
+                <h3 id="available-money">Money Available</h3>
+                <button id="cart-button">Cart</button>
+            
         </nav>
     </header>
     <main class="container">
         <div id="row app">
-            <div class="col" id="fruits">
+            <div class="col d-flex" id="fruits">
             </div>
+        </div>
+        <div class="row bg-primary app" id="cart">
+            
         </div>
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
-            <p><small>Made with love by Codeworks</small></p>
+            <p><small>Made with ♥ by Veronica and Amanda</small></p>
         </div>
     </footer>
 
